@@ -81,7 +81,7 @@ function removeFromCart(item) {
   if (flag === true) {
     return cart;
   } else {
-    return 'That item is not in your cart.';
+    alert('That item is not in your cart.');
   }
 }
 
