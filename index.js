@@ -30,7 +30,7 @@ function viewCart() {
         str += (itemKey + ' at $' + obj[itemKey]);
       });
     });
-    console.log( 'In your cart, you have ' + str);
+    console.log( 'In your cart, you have ' + str+".");
   } else if (cart.length === 2) {
     for (var i = 0; i < cart.length - 1; i++) {
       for (var keys in cart[i]) {
