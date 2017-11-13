@@ -42,7 +42,7 @@ function viewCart() {
         finalStr += (key + ' at $' + cart[j][key] + '.');
       }
     }
-    return 'In your cart, you have ' + str + finalStr;
+    console.log( 'In your cart, you have ' + str + finalStr);
   } else {
     for (var i = 0; i < cart.length - 1; i++) {
       for (var keys in cart[i]) {
@@ -54,7 +54,7 @@ function viewCart() {
         finalStr += ('and ' + key + ' at $' + cart[j][key] + '.');
       }
     }
-    return ('In your cart, you have ' + str + finalStr);
+    console.log('In your cart, you have ' + str + finalStr);
   }
 }
 
