@@ -27,34 +27,34 @@ function viewCart() {
   } else if (cart.length === 1) {
     cart.forEach(function(obj) {
       Object.keys(obj).forEach(function(itemKey) {
-        str += itemKey + ' at $' + obj[itemKey];
+        str += (itemKey + ' at $' + obj[itemKey]);
       });
     });
     return 'In your cart, you have ' + str;
   } else if (cart.length === 2) {
     for (var i = 0; i < cart.length - 1; i++) {
       for (var keys in cart[i]) {
-        str += keys + ' at $' + cart[i][keys] + ' and ';
+        str += (keys + ' at $' + cart[i][keys] + ' and ');
       }
     }
     for (var j = cart.length - 1; j < cart.length; j++) {
       for (var key in cart[j]) {
-        finalStr += key + ' at $' + cart[j][key] + '.';
+        finalStr += (key + ' at $' + cart[j][key] + '.');
       }
     }
     return 'In your cart, you have ' + str + finalStr;
   } else {
     for (var i = 0; i < cart.length - 1; i++) {
       for (var keys in cart[i]) {
-        str += keys + ' at $' + cart[i][keys] + ', ';
+        str += (keys + ' at $' + cart[i][keys] + ', ');
       }
     }
     for (var j = cart.length - 1; j < cart.length; j++) {
       for (var key in cart[j]) {
-        finalStr += 'and ' + key + ' at $' + cart[j][key] + '.';
+        finalStr += ('and ' + key + ' at $' + cart[j][key] + '.');
       }
     }
-    return 'In your cart, you have ' + str + finalStr;
+    return ('In your cart, you have ' + str + finalStr);
   }
 }
 
